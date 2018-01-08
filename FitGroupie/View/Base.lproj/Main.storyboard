@@ -26,7 +26,7 @@
                                         <rect key="frame" x="269" y="100" width="76" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="76" id="jCS-K9-asO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="jCS-K9-asO"/>
                                         </constraints>
                                         <size key="titleShadowOffset" width="10" height="11"/>
                                         <state key="normal" title="Add Event">
@@ -86,7 +86,7 @@
         <scene sceneID="W2B-zz-kJG">
             <objects>
                 <viewController title="Add Event View Controller" id="MUx-mH-Fbt" customClass="AddEventViewController" customModule="FitGroupie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ON8-s0-fbz">
+                    <view key="view" contentMode="scaleToFill" id="ON8-s0-fbz" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -138,7 +138,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mih-hm-AGY">
                                 <rect key="frame" x="157" y="502" width="67" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="NPQ-k8-DaA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="NPQ-k8-DaA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -191,7 +191,7 @@
                                 <rect key="frame" x="16" y="44" width="69" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IyE-Gg-mQ7"/>
-                                    <constraint firstAttribute="width" constant="69" id="SZS-m0-j38"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="69" id="SZS-m0-j38"/>
                                 </constraints>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,7 +207,7 @@
                                     <constraint firstAttribute="height" constant="43" id="RY1-Lp-dEo"/>
                                 </constraints>
                                 <state key="normal" title="Create New Workout">
-                                    <color key="titleColor" red="1" green="0.14939361809999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createWorkoutButtonPressed:" destination="MUx-mH-Fbt" eventType="touchUpInside" id="mBj-mr-e8f"/>
@@ -295,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-Sf-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="907.24637681159425" y="132.88043478260872"/>
+            <point key="canvasLocation" x="1001" y="98"/>
         </scene>
     </scenes>
 </document>

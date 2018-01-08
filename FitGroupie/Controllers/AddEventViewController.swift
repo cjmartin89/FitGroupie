@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import Firebase
 
-class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // Constants
     
@@ -47,6 +47,9 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         statePicker.dataSource = self
         workoutTypePicker.delegate = self
         workoutTypePicker.dataSource = self
+        self.addressTextField.delegate = self
+        self.cityTextField.delegate = self
+        self.workoutNameTextField.delegate = self
         
         // Set Workout Duration Text Field Initial Value
         
@@ -124,6 +127,11 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         return address
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     

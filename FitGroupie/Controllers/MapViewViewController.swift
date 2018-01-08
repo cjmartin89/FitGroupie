@@ -26,6 +26,15 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var locationManager : CLLocationManager?
     
     // IB Outlet
+
+    @IBAction func userTappedBackground(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    // Resign Keyboard On Background Touch
+    
+ 
+    
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -80,13 +89,10 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         locationManager = nil
     }
     
-     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Failed to initialize GPS: ", error.description)
     }
 
-
-
-    
     //MARK: - Annotations
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
