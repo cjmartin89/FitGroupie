@@ -1,0 +1,6 @@
+framework module Pods_FitGroupieUITests {
+  umbrella header "Pods-FitGroupieUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
