@@ -704,7 +704,7 @@
 				DEVELOPMENT_TEAM = 3P68SY6MD5;
 				INFOPLIST_FILE = FitGroupie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mts.FitGroupie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MTS.FitGroupie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6f0a5477-5193-4097-80e6-3d4a57d82af6";
 				PROVISIONING_PROFILE_SPECIFIER = "MTS Provisioning Profile";
@@ -723,7 +723,7 @@
 				DEVELOPMENT_TEAM = 3P68SY6MD5;
 				INFOPLIST_FILE = FitGroupie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mts.FitGroupie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MTS.FitGroupie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6f0a5477-5193-4097-80e6-3d4a57d82af6";
 				PROVISIONING_PROFILE_SPECIFIER = "MTS Provisioning Profile";
