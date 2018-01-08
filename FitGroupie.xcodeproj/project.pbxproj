@@ -704,10 +704,10 @@
 				DEVELOPMENT_TEAM = 3P68SY6MD5;
 				INFOPLIST_FILE = FitGroupie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MTS.FitGroupie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mts.FitGroupieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6f0a5477-5193-4097-80e6-3d4a57d82af6";
-				PROVISIONING_PROFILE_SPECIFIER = "MTS Provisioning Profile";
+				PROVISIONING_PROFILE = "daf482d4-32d4-4000-8b2e-f1b04340fe6f";
+				PROVISIONING_PROFILE_SPECIFIER = "Fit Groupie Provisioning Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -723,10 +723,10 @@
 				DEVELOPMENT_TEAM = 3P68SY6MD5;
 				INFOPLIST_FILE = FitGroupie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MTS.FitGroupie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mts.FitGroupieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6f0a5477-5193-4097-80e6-3d4a57d82af6";
-				PROVISIONING_PROFILE_SPECIFIER = "MTS Provisioning Profile";
+				PROVISIONING_PROFILE = "daf482d4-32d4-4000-8b2e-f1b04340fe6f";
+				PROVISIONING_PROFILE_SPECIFIER = "Fit Groupie Provisioning Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
