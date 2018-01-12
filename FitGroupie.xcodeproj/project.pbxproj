@@ -34,7 +34,6 @@
 		35E61E39200870A7002DC3F3 /* filter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E61E38200870A6002DC3F3 /* filter-icon.png */; };
 		35E61E3D200872B9002DC3F3 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E61E3C200872B8002DC3F3 /* add-icon.png */; };
 		35E61E3F20087533002DC3F3 /* filter-icon-edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E61E3E20087532002DC3F3 /* filter-icon-edited.png */; };
-		35E61E4220091C67002DC3F3 /* woman-running2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E61E4120091C61002DC3F3 /* woman-running2.jpg */; };
 		35F2D05F2002D95B00828838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AEFA8820005BDC0037260F /* Main.storyboard */; };
 		6A440FB5F7F54531565268E0 /* Pods_FitGroupieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629B1B2280BA0F68ED0BB1DC /* Pods_FitGroupieTests.framework */; };
 		9A52B9941C04367067EA6722 /* Pods_FitGroupieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BA21BB560741A0F098CA46 /* Pods_FitGroupieUITests.framework */; };
@@ -89,7 +88,6 @@
 		35E61E38200870A6002DC3F3 /* filter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filter-icon.png"; path = "../../../../Pictures/FIt Groupie/filter-icon.png"; sourceTree = "<group>"; };
 		35E61E3C200872B8002DC3F3 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-icon.png"; path = "../../../../Pictures/FIt Groupie/add-icon.png"; sourceTree = "<group>"; };
 		35E61E3E20087532002DC3F3 /* filter-icon-edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filter-icon-edited.png"; path = "../../../../Pictures/FIt Groupie/filter-icon-edited.png"; sourceTree = "<group>"; };
-		35E61E4120091C61002DC3F3 /* woman-running2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "woman-running2.jpg"; sourceTree = "<group>"; };
 		58A8F725BFD86B3F0E70EF3B /* Pods_FitGroupie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitGroupie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629B1B2280BA0F68ED0BB1DC /* Pods_FitGroupieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitGroupieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D7314D74ECED9385CD157B /* Pods-FitGroupieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitGroupieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitGroupieUITests/Pods-FitGroupieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 		35E61E2A200852C7002DC3F3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				35E61E4120091C61002DC3F3 /* woman-running2.jpg */,
 				35E61E3E20087532002DC3F3 /* filter-icon-edited.png */,
 				35E61E3C200872B8002DC3F3 /* add-icon.png */,
 				35E61E38200870A6002DC3F3 /* filter-icon.png */,
@@ -379,7 +376,6 @@
 				35AEFA8F20005BDC0037260F /* LaunchScreen.storyboard in Resources */,
 				35E61E3F20087533002DC3F3 /* filter-icon-edited.png in Resources */,
 				35AEFAB820013C4E0037260F /* GoogleService-Info.plist in Resources */,
-				35E61E4220091C67002DC3F3 /* woman-running2.jpg in Resources */,
 				35AEFA8C20005BDC0037260F /* Assets.xcassets in Resources */,
 				35E61E39200870A7002DC3F3 /* filter-icon.png in Resources */,
 				35E61E3D200872B9002DC3F3 /* add-icon.png in Resources */,

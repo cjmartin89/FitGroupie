@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman-running2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rSE-1Z-w8q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Running Woman" translatesAutoresizingMaskIntoConstraints="NO" id="rSE-1Z-w8q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -792,11 +792,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Running Woman" width="634" height="397"/>
         <image name="add-icon.png" width="512" height="512"/>
         <image name="btn_google_dark_focus_ios.png" width="48" height="48"/>
         <image name="continue-with-facebook.png" width="969" height="157"/>
         <image name="filter-icon-edited.png" width="2550" height="3300"/>
-        <image name="woman-running2.jpg" width="634" height="397"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wdR-Rc-wat"/>
