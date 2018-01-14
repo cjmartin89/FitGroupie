@@ -105,6 +105,8 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 view.isEnabled = true
                 view.canShowCallout = true
                 view.leftCalloutAccessoryView = UIImageView(image: pizzaPin)
+                let btn = UIButton(type: .detailDisclosure)
+                view.rightCalloutAccessoryView = btn
                 return view
             }
         }
@@ -115,9 +117,9 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     func retrieveWorkouts() {
         
-        let messageDB = Database.database().reference().child("Workouts")
+        let workoutDB = Database.database().reference().child("Workouts")
         
-        messageDB.observe(.childAdded, with: { (snapshot) in
+        workoutDB.observe(.childAdded, with: { (snapshot) in
             
             let snapshotValue = snapshot.value as! Dictionary<String, Any>
             

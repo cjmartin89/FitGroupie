@@ -16,13 +16,16 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     let geoCoder = CLGeocoder()
     
+    
     // Variable
     
     var selectedState = ""
     var selectedWorkoutType = ""
+    var selectedActivityLevel = ""
     var address = ""
     var retrievedLatitude : CLLocationDegrees?
     var retrievedLongitude : CLLocationDegrees?
+    
     
     // IB Outlets
     
@@ -35,7 +38,10 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var durationSlider: UISlider!
     @IBOutlet weak var workoutTimePicker: UIDatePicker!
     
-
+    @IBOutlet weak var activityLevelPicker: UIPickerView!
+    
+    // View Did Load
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +53,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         statePicker.dataSource = self
         workoutTypePicker.delegate = self
         workoutTypePicker.dataSource = self
+        activityLevelPicker.delegate = self
+        activityLevelPicker.dataSource = self
         self.addressTextField.delegate = self
         self.cityTextField.delegate = self
         self.workoutNameTextField.delegate = self
@@ -54,6 +62,9 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Set Workout Duration Text Field Initial Value
         
         workoutDurationTextField.text = "0"
+        
+        
+
     }
     
     // IB Actions
@@ -111,6 +122,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Functions
+    
     @IBAction func durationSliderValueChanged(_ sender: Any) {
         
         workoutDurationTextField.text = round(durationSlider.value).cleanValue
@@ -160,42 +173,49 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         return (latitude!, longitude!)
     }
+    
+    
 
-    
-    // Delegate Methods
+        // Delegate Methods
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == statePicker {
-            return states.count
-        } else {
-            return workoutTypes.count
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
         }
-    }
     
-    // Place The Data In The Picker
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == statePicker {
-            return states[row]
-        } else {
-            return workoutTypes[row]
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            if pickerView == statePicker {
+                return states.count
+            } else if pickerView == workoutTypePicker {
+                return workoutTypesArray.count
+            } else {
+                return activityLevels.count
+            }
         }
-    }
     
-    // Capture The Selected State
+        // Place The Data In The Picker
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == statePicker {
-            selectedState = states[row]
-        } else {
-            selectedWorkoutType = workoutTypes[row]
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            if pickerView == statePicker {
+                return states[row]
+            } else if pickerView == workoutTypePicker {
+                return workoutTypesArray[row]
+            } else {
+                return activityLevels[row]
+            }
         }
-        
-    }
+    
+        // Capture The Selected State
+    
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            if pickerView == statePicker {
+                selectedState = states[row]
+            } else if pickerView == workoutTypePicker {
+                selectedWorkoutType = workoutTypesArray[row]
+            } else {
+                selectedActivityLevel = activityLevels[row]
+            }
+    
+        }
 }
 
 // Remove Empty Decimal Spaces

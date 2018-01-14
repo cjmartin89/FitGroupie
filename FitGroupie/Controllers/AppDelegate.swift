@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MSCrashes.self
             ])
         
+        retrieveActivityLevels()
+        retrieveWorkoutTypes()
+        
         return true
     }
 
