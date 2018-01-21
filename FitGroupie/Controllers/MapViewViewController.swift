@@ -74,6 +74,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        workoutArray = kWorkoutList_KEY
         addAnnotations()
     }
     
@@ -160,7 +161,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     func addAnnotations() {
-        mapView.addAnnotations(kWorkoutList_KEY)
+        mapView.addAnnotations(workoutArray)
     }
     
     func resetRegion(){

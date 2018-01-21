@@ -36,9 +36,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         workoutsSearchBar.returnKeyType = UIReturnKeyType.done
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
-        workoutsTableView.reloadData()
         
         workoutArray = kWorkoutList_KEY
+        workoutsTableView.reloadData()
     }
     
     //    MARK: - TableView DataSource Methods
