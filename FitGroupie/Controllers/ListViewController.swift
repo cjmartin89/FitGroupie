@@ -26,6 +26,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        workoutsTableView.addSubview(self.refreshControl)
  
     }
     
@@ -87,6 +89,26 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
     }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ListViewController.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        workoutArray = kWorkoutList_KEY
+        
+        workoutsTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
+    
     
     // Search Bar Setup
     
