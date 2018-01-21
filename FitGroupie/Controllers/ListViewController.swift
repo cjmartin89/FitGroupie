@@ -21,20 +21,22 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var isSearching = false
     var workoutIndex : Int = 0
-    var workoutArray = kWorkoutList_KEY
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+ 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         workoutsSearchBar.delegate = self
         workoutsSearchBar.returnKeyType = UIReturnKeyType.done
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
+        workoutsTableView.reloadData()
         
-        retrieveWorkouts()
-        print(workoutArray)
-        
+        workoutArray = kWorkoutList_KEY
     }
     
     //    MARK: - TableView DataSource Methods
@@ -71,32 +73,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         performSegue(withIdentifier: "workoutDetailSegue", sender: self)
         workoutsTableView.deselectRow(at: indexPath, animated: true)
     }
-    
-//    func retrieveWorkouts() {
-//
-//        let workoutDB = Database.database().reference().child("Workouts")
-//
-//        workoutDB.observe(.childAdded, with: { (snapshot) in
-//
-//            let snapshotValue = snapshot.value as! Dictionary<String, Any>
-//
-//            let workoutName = snapshotValue["Workout Name"] as? String
-//            let workoutAddress = snapshotValue["Workout Address"] as? String
-//            let workoutTime = snapshotValue["Workout Time"]!
-//            let workoutType = snapshotValue["Workout Type"] as? String
-//            let workoutDuration = snapshotValue["Workout Duration"] as? Int
-//            let selectedActivityLevel = snapshotValue["Activity Level"] as? String
-//            let latitude = snapshotValue["Latitude"]
-//            let longitude = snapshotValue["Longitude"]
-//
-//            print(workoutName ?? "Name", workoutAddress ?? "Address", workoutTime, workoutType ?? "Basketball", workoutDuration ?? 0, selectedActivityLevel ?? "Beginner")
-//
-//            let workoutLocation = WorkoutLocation(name: workoutName ?? "Name ?" , lat: latitude as! CLLocationDegrees, long: longitude as! CLLocationDegrees, Address: workoutAddress ?? "Address ?", Type: workoutType ?? "Type ?", Date: Date.init(), Duration: workoutDuration ?? 0, Level: activityLevel )
-//
-//            self.workoutArray.append(workoutLocation)
-//            print("Array", self.workoutArray)
-//        })
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "workoutDetailSegue" {

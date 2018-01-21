@@ -19,9 +19,9 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     // Variable
     
-    var selectedState = ""
-    var selectedWorkoutType = ""
-    var selectedActivityLevel = ""
+    var selectedState : String?
+    var selectedWorkoutType : String?
+    var selectedActivityLevel : String?
     var address = ""
     var retrievedLatitude : CLLocationDegrees?
     var retrievedLongitude : CLLocationDegrees?
@@ -63,8 +63,13 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         workoutDurationTextField.text = "0"
         
+        activityLevelPicker.selectRow(0, inComponent: 0, animated: true)
+        workoutTypePicker.selectRow(0, inComponent: 0, animated: true)
+        statePicker.selectRow(0, inComponent: 0, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-
     }
     
     // IB Actions
@@ -74,18 +79,13 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         geoCoder.geocodeAddressString(getAddress()) { (placemarks, error) in
             // Process Response
             let coordinates = self.processResponse(withPlacemarks: placemarks, error: error)
-            print(coordinates)
             self.retrievedLongitude = coordinates.longitude
-            print(self.retrievedLongitude!)
             self.retrievedLatitude = coordinates.latitude
-            print(self.retrievedLatitude!)
         }
         
         let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             // Your code with delay
-            
-            print(self.retrievedLatitude ?? 0.00, self.retrievedLongitude ?? 0.00)
             
             //TODO: Send the message to Firebase and save it in our database
             
@@ -137,7 +137,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func getAddress() -> String {
         
-        address = addressTextField.text! + "," + cityTextField.text! + "," + selectedState
+        address = addressTextField.text! + "," + cityTextField.text! + "," + selectedState!
         
         return address
         

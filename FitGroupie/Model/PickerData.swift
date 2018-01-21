@@ -14,13 +14,13 @@ import FirebaseDatabase
 var activityLevels = [String]()
 var workoutTypesArray = [String]()
 
-let states = [ "AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA",
+let states = [ "Select State","AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA",
                "MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC",
                "SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"]
 
-//let activityLevels = ["Beginner", "Intermediate", "Advanced"]
-
 func retrieveActivityLevels() {
+    
+    activityLevels.append("Select Activity Level")
     
     let activityLevelDB = Database.database().reference().child("Activity Level")
     
@@ -37,6 +37,8 @@ func retrieveActivityLevels() {
 }
 
 func retrieveWorkoutTypes() {
+    
+    workoutTypesArray.append("Select Workout Type")
     
     let activityLevelDB = Database.database().reference().child("Workout Types")
     

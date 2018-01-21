@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitGroupie/Controllers/WorkoutDetailViewController.swift"
-            timestampString = "538202647.9902771"
+            timestampString = "538249070.580083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -26,13 +26,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitGroupie/Controllers/MapViewViewController.swift"
-            timestampString = "538202647.99036"
+            timestampString = "538249070.580181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "mapView(_:viewFor:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FitGroupie/Controllers/WelcomeViewController.swift"
+            timestampString = "538245156.238235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "WelcomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.WelcomeViewController.logInButton.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/WelcomeViewController.swift"
+                  timestampString = "538241269.665866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.WelcomeViewController.logInButton.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/WelcomeViewController.swift"
+                  timestampString = "538241269.667912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.WelcomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FitGroupie.WelcomeViewController"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/WelcomeViewController.swift"
+                  timestampString = "538241269.670151"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.WelcomeViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;FitGroupie.WelcomeViewController&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/WelcomeViewController.swift"
+                  timestampString = "538241269.673162"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "165">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -12,7 +12,7 @@ import CoreLocation
 
 
 var workoutArrayList = [WorkoutLocation]()
-let kWorkoutList_KEY = workoutArrayList
+var kWorkoutList_KEY = workoutArrayList
 
 class ModelController {
     var workoutArray = [WorkoutLocation]()
@@ -37,11 +37,9 @@ func retrieveWorkouts() {
         let latitude = snapshotValue["Latitude"]
         let longitude = snapshotValue["Longitude"]
         
-        print(workoutName ?? "Name", workoutAddress ?? "Address", workoutTime, workoutType ?? "Basketball", workoutDuration ?? 0, selectedActivityLevel ?? "Beginner")
-        
         let workoutLocation = WorkoutLocation(name: workoutName ?? "Name ?" , lat: latitude as! CLLocationDegrees, long: longitude as! CLLocationDegrees, Address: workoutAddress ?? "Address ?", Type: workoutType ?? "Type", Date: Date.init(), Duration: workoutDuration ?? 0, Level: selectedActivityLevel ?? "Activity Level" )
         
         workoutArrayList.append(workoutLocation)
-        print(workoutArrayList)
+        kWorkoutList_KEY = workoutArrayList
     })
 }

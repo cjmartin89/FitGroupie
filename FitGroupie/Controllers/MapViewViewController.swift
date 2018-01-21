@@ -38,7 +38,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     // Variables
     
     var locationManager : CLLocationManager?
-    var workoutArray = kWorkoutList_KEY
+//    var workoutArray = kWorkoutList_KEY
     var modelController: ModelController!
     
     // IB Outlet
@@ -57,20 +57,23 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
         
+        mapView.delegate = self
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         locationManager!.desiredAccuracy = kCLLocationAccuracyBest
         locationManager!.distanceFilter = kCLDistanceFilterNone
-//        mapView.showsUserLocation = true
+        //        mapView.showsUserLocation = true
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             locationManager!.startUpdatingLocation()
         } else {
             locationManager!.requestWhenInUseAuthorization()
         }
-
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         addAnnotations()
     }
     
@@ -143,46 +146,20 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let workoutDetailViewController = segue.destination as! WorkoutDetailViewController
-        workoutDetailViewController.workoutName = workoutName
-        workoutDetailViewController.workoutAddress = workoutAddress
-        workoutDetailViewController.workoutType = workoutType
-        workoutDetailViewController.workoutDuration = workoutDuration
-        workoutDetailViewController.activityLevel = activityLevel
+        if segue.identifier == "mapDetailView" {
+            let workoutDetailViewController = segue.destination as! WorkoutDetailViewController
+            workoutDetailViewController.workoutName = workoutName
+            workoutDetailViewController.workoutAddress = workoutAddress
+            workoutDetailViewController.workoutType = workoutType
+            workoutDetailViewController.workoutDuration = workoutDuration
+            workoutDetailViewController.activityLevel = activityLevel
+        }
+        else {
+            return
+        }
     }
-
-
-    //MARK: - Map setup
-    
-//    func retrieveWorkouts() {
-//
-//        let workoutDB = Database.database().reference().child("Workouts")
-//
-//        workoutDB.observe(.childAdded, with: { (snapshot) in
-//
-//            let snapshotValue = snapshot.value as! Dictionary<String, Any>
-//
-//            let workoutName = snapshotValue["Workout Name"] as? String
-//            let workoutAddress = snapshotValue["Workout Address"] as? String
-//            let workoutTime = snapshotValue["Workout Time"]!
-//            let workoutType = snapshotValue["Workout Type"] as? String
-//            let workoutDuration = snapshotValue["Workout Duration"] as? Int
-//            let latitude = snapshotValue["Latitude"]
-//            let longitude = snapshotValue["Longitude"]
-//            let activityLevel = snapshotValue["Activity Level"] as? String
-//
-//            print(workoutName ?? "Name ?" , workoutAddress ?? "Location ?", workoutTime, workoutType ?? "Workout Type ?", workoutDuration ?? 0)
-//
-//            let workoutLocation = WorkoutLocation(name: workoutName ?? "Name ?" , lat: latitude as! CLLocationDegrees, long: longitude as! CLLocationDegrees, Address: workoutAddress ?? "Address ?", Type: workoutType ?? "Type ?", Date: Date.init(), Duration: workoutDuration ?? 0, Level: activityLevel ?? "Level ?")
-//
-//            workoutArray.append(workoutLocation)
-//            print("Array", workoutArray)
-//            self.mapView.addAnnotations(workoutArray)
-//        })
-//    }
     
     func addAnnotations() {
-        print("Workout Array: ", kWorkoutList_KEY)
         mapView.addAnnotations(kWorkoutList_KEY)
     }
     
