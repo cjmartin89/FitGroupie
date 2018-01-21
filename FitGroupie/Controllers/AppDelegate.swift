@@ -28,8 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MSCrashes.self
             ])
         
+//        class WorkoutLocationList: NSObject {
+//            var workout = [WorkoutLocation]()
+//            var filteredWorkouts = [WorkoutLocation]()
+//            override init(){
+//                
+//            }
+//        }
+        
+        if let mapViewController = window?.rootViewController as? MapViewViewController {
+            mapViewController.modelController = ModelController()
+        }
+        
         retrieveActivityLevels()
         retrieveWorkoutTypes()
+        retrieveWorkouts()
         
         return true
     }

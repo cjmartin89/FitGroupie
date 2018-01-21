@@ -10,11 +10,23 @@ import Foundation
 import UIKit
 import MapKit
 import Firebase
+
 // Constants
 
-var workoutArray = WorkoutLocationList().workout
 let pizzaPin = UIImage(named: "pizza pin")
 let crossHairs = UIImage(named: "crosshairs")
+
+// Variables
+
+var workoutName : String = ""
+var workoutType : String = ""
+var workoutAddress : String = ""
+var workoutDate : Date = Date.init()
+var workoutDuration : Int = 0
+var activityLevel : String = ""
+var workoutArray = kWorkoutList_KEY
+
+var modelController: ModelController!
 
 
 //MARK: Global Declarations
@@ -23,7 +35,11 @@ let homeCoordinate = CLLocationCoordinate2DMake(26.027351, -80.231457)// Home st
 
 class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    // Variables
+    
     var locationManager : CLLocationManager?
+    var workoutArray = kWorkoutList_KEY
+    var modelController: ModelController!
     
     // IB Outlet
 
@@ -49,17 +65,13 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         locationManager!.distanceFilter = kCLDistanceFilterNone
 //        mapView.showsUserLocation = true
         
-        
-        
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             locationManager!.startUpdatingLocation()
         } else {
             locationManager!.requestWhenInUseAuthorization()
         }
-        
-        
 
-        retrieveWorkouts()
+        addAnnotations()
     }
     
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -97,6 +109,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? WorkoutLocation{
+            
             if let view = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier){
                 return view
             }else{
@@ -112,31 +125,65 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         }
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? WorkoutLocation {
+            workoutName = annotation.title ?? "Name"
+            workoutAddress = annotation.workoutAddress
+            workoutType = annotation.workoutType
+            workoutDuration = annotation.workoutDuration
+            activityLevel = annotation.activityLevel
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            performSegue(withIdentifier: "mapDetailView", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let workoutDetailViewController = segue.destination as! WorkoutDetailViewController
+        workoutDetailViewController.workoutName = workoutName
+        workoutDetailViewController.workoutAddress = workoutAddress
+        workoutDetailViewController.workoutType = workoutType
+        workoutDetailViewController.workoutDuration = workoutDuration
+        workoutDetailViewController.activityLevel = activityLevel
+    }
+
 
     //MARK: - Map setup
     
-    func retrieveWorkouts() {
-        
-        let workoutDB = Database.database().reference().child("Workouts")
-        
-        workoutDB.observe(.childAdded, with: { (snapshot) in
-            
-            let snapshotValue = snapshot.value as! Dictionary<String, Any>
-            
-            let workoutName = snapshotValue["Workout Name"]!
-            let workoutAddress = snapshotValue["Workout Address"]!
-            let workoutTime = snapshotValue["Workout Time"]!
-            let workoutType = snapshotValue["Workout Type"]
-            let workoutDuration = snapshotValue["Workout Duration"]
-            let latitude = snapshotValue["Latitude"]
-            let longitude = snapshotValue["Longitude"]
-            
-            print(workoutName, workoutAddress, workoutTime, workoutType!, workoutDuration!)
-            
-            let workoutLocation = WorkoutLocation(name: workoutName as! String, lat: latitude as! CLLocationDegrees, long: longitude as! CLLocationDegrees)
-            workoutArray.append(workoutLocation)
-            self.mapView.addAnnotations(workoutArray)
-        })
+//    func retrieveWorkouts() {
+//
+//        let workoutDB = Database.database().reference().child("Workouts")
+//
+//        workoutDB.observe(.childAdded, with: { (snapshot) in
+//
+//            let snapshotValue = snapshot.value as! Dictionary<String, Any>
+//
+//            let workoutName = snapshotValue["Workout Name"] as? String
+//            let workoutAddress = snapshotValue["Workout Address"] as? String
+//            let workoutTime = snapshotValue["Workout Time"]!
+//            let workoutType = snapshotValue["Workout Type"] as? String
+//            let workoutDuration = snapshotValue["Workout Duration"] as? Int
+//            let latitude = snapshotValue["Latitude"]
+//            let longitude = snapshotValue["Longitude"]
+//            let activityLevel = snapshotValue["Activity Level"] as? String
+//
+//            print(workoutName ?? "Name ?" , workoutAddress ?? "Location ?", workoutTime, workoutType ?? "Workout Type ?", workoutDuration ?? 0)
+//
+//            let workoutLocation = WorkoutLocation(name: workoutName ?? "Name ?" , lat: latitude as! CLLocationDegrees, long: longitude as! CLLocationDegrees, Address: workoutAddress ?? "Address ?", Type: workoutType ?? "Type ?", Date: Date.init(), Duration: workoutDuration ?? 0, Level: activityLevel ?? "Level ?")
+//
+//            workoutArray.append(workoutLocation)
+//            print("Array", workoutArray)
+//            self.mapView.addAnnotations(workoutArray)
+//        })
+//    }
+    
+    func addAnnotations() {
+        print("Workout Array: ", kWorkoutList_KEY)
+        mapView.addAnnotations(kWorkoutList_KEY)
     }
     
     func resetRegion(){

@@ -97,7 +97,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                                      "Workout Time" : String(describing: self.workoutTimePicker.date),
                                      "Workout Duration" : self.durationSlider.value,
                                      "Latitude" : self.retrievedLatitude!,
-                                     "Longitude" : self.retrievedLongitude!
+                                     "Longitude" : self.retrievedLongitude!,
+                                     "Activity Level" : self.selectedActivityLevel,
                 ] as [String : Any]
             workoutDB.childByAutoId().setValue(workoutDictionary) {
                 (error, ref) in
