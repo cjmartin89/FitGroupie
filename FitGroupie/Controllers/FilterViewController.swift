@@ -14,6 +14,9 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var selectedWorkoutType = ""
     var selectedActivityLevel = ""
+    var workoutList = kWorkoutList_KEY
+    var filteredWorkouts = [WorkoutLocation]()
+    
     
     // IB Outlets
     
@@ -78,6 +81,18 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
     }
+    
+    @IBAction func filterButtonPressed(_ sender: UIButton) {
+        kfilteredWorkoutList_KEY = kWorkoutList_KEY
+        
+        for workout in workoutList {
+            if (workout.workoutType == selectedWorkoutType) && (workout.activityLevel == selectedActivityLevel)  {
+                    filteredWorkouts.append(workout)
+            }
+        }
+        kfilteredWorkoutList_KEY = filteredWorkouts
+    }
+    
 }
 
 

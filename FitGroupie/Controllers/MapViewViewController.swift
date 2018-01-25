@@ -46,12 +46,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     @IBAction func userTappedBackground(sender: AnyObject) {
         view.endEditing(true)
     }
-    
-    // Resign Keyboard On Background Touch
-    
- 
-    
-    
+
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -74,7 +69,7 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        workoutArray = kWorkoutList_KEY
+        workoutArray = kfilteredWorkoutList_KEY
         addAnnotations()
     }
     

@@ -13,6 +13,8 @@ import CoreLocation
 
 var workoutArrayList = [WorkoutLocation]()
 var kWorkoutList_KEY = workoutArrayList
+var filteredWorkoutArrayList = workoutArrayList
+var kfilteredWorkoutList_KEY =  filteredWorkoutArrayList
 
 class ModelController {
     var workoutArray = [WorkoutLocation]()

@@ -37,7 +37,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
         
-        workoutArray = kWorkoutList_KEY
+        workoutArray = kfilteredWorkoutList_KEY
         workoutsTableView.reloadData()
     }
     
