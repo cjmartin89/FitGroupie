@@ -32,6 +32,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.isHidden = true
+        
         workoutsSearchBar.delegate = self
         workoutsSearchBar.returnKeyType = UIReturnKeyType.done
         workoutsTableView.delegate = self
@@ -89,6 +92,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
     }
+    
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    // Handle Refresh
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()

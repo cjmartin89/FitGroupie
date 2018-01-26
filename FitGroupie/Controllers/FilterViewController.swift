@@ -28,6 +28,8 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = false
 
         // Do any additional setup after loading the view.
         workoutTypePicker.delegate = self
@@ -84,6 +86,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBAction func filterButtonPressed(_ sender: UIButton) {
         kfilteredWorkoutList_KEY = kWorkoutList_KEY
+        navigationController?.popViewController(animated: true)
         
         for workout in workoutList {
             if (workout.workoutType == selectedWorkoutType) && (workout.activityLevel == selectedActivityLevel)  {

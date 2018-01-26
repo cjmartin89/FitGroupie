@@ -44,6 +44,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = false
 
         // Do any additional setup after loading the view.
         
@@ -66,6 +68,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         activityLevelPicker.selectRow(0, inComponent: 0, animated: true)
         workoutTypePicker.selectRow(0, inComponent: 0, animated: true)
         statePicker.selectRow(0, inComponent: 0, animated: true)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

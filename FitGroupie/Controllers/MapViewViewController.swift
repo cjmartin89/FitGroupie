@@ -24,7 +24,7 @@ var workoutAddress : String = ""
 var workoutDate : Date = Date.init()
 var workoutDuration : Int = 0
 var activityLevel : String = ""
-var workoutArray = kWorkoutList_KEY
+var workoutArray = kfilteredWorkoutList_KEY
 
 var modelController: ModelController!
 
@@ -46,13 +46,18 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     @IBAction func userTappedBackground(sender: AnyObject) {
         view.endEditing(true)
     }
-
+    
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     @IBOutlet weak var mapView: MKMapView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addAnnotations()
         mapView.delegate = self
         locationManager = CLLocationManager()
         locationManager!.delegate = self
@@ -69,6 +74,8 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+        mapView.removeAnnotations(workoutArray)
         workoutArray = kfilteredWorkoutList_KEY
         addAnnotations()
     }
@@ -163,6 +170,8 @@ class MapViewViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         let region = MKCoordinateRegionMakeWithDistance(homeCoordinate, 5000, 5000)
         mapView.setRegion(region, animated: true)
     }
+    
+    
 
     
     //MARK: Life Cycle
