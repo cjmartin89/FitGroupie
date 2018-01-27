@@ -96,6 +96,11 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         kfilteredWorkoutList_KEY = filteredWorkouts
     }
     
+    @IBAction func clearFilterButtonPressed(_ sender: Any) {
+        kfilteredWorkoutList_KEY = kWorkoutList_KEY
+    }
+    
+    
 }
 
 
