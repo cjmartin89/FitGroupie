@@ -12,10 +12,11 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // Variables
     
-    var selectedWorkoutType = ""
-    var selectedActivityLevel = ""
+    var selectedWorkoutType : String? = ""
+    var selectedActivityLevel : String? = ""
     var workoutList = kWorkoutList_KEY
     var filteredWorkouts = [WorkoutLocation]()
+    var filteredWorkoutsList = [WorkoutLocation]()
     
     
     // IB Outlets
@@ -88,12 +89,44 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         kfilteredWorkoutList_KEY = kWorkoutList_KEY
         navigationController?.popViewController(animated: true)
         
-        for workout in workoutList {
-            if (workout.workoutType == selectedWorkoutType) && (workout.activityLevel == selectedActivityLevel)  {
-                    filteredWorkouts.append(workout)
+        if (selectedWorkoutType != nil && selectedWorkoutType != "Select Workout Type") {
+            for workout in workoutList {
+                if (workout.workoutType == selectedWorkoutType) {
+                    filteredWorkoutsList.append(workout)
+                    print("Activity Type: ", workout.workoutType, workout.activityLevel)
+                }
             }
         }
+        
+        if (selectedActivityLevel != nil && selectedWorkoutType != "Select Activity Level") {
+            for workout in workoutList {
+                if (workout.activityLevel == selectedActivityLevel) {
+                    filteredWorkoutsList.append(workout)
+                    print("Activity Level", workout.activityLevel, workout.workoutType)
+                }
+            }
+        }
+        
+        if (selectedActivityLevel != "" && selectedActivityLevel != "Select Activity Level") && (selectedWorkoutType != "" && selectedWorkoutType != "Select Workout Type") {
+            filteredWorkouts = filteredWorkoutsList.filter { ($0.workoutType == selectedWorkoutType && $0.activityLevel == selectedActivityLevel)}
+        }
+//        else if (selectedWorkoutType != "" && selectedWorkoutType != "Select Workout Type") {
+//            filteredWorkouts = filteredWorkoutsList.filter { ($0.workoutType == selectedWorkoutType) }
+//        }
+        else  {
+            print("Using This Filter")
+            filteredWorkouts = filteredWorkoutsList.filter { ($0.activityLevel == selectedActivityLevel) || ($0.workoutType == selectedWorkoutType)}
+        }
+        
+        for workout in filteredWorkouts {
+            print("Activity Level: ", workout.activityLevel, "Workout Type: ", workout.workoutType)
+        }
+            
         kfilteredWorkoutList_KEY = filteredWorkouts
+        
+        
+        selectedWorkoutType = ""
+        selectedActivityLevel = ""
     }
     
     @IBAction func clearFilterButtonPressed(_ sender: Any) {

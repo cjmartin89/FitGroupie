@@ -152,12 +152,184 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitGroupie/Controllers/FilterViewController.swift"
-            timestampString = "538721849.235594"
+            timestampString = "538982714.382606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FitGroupie/Controllers/FilterViewController.swift"
+            timestampString = "538982714.384167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "FilterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.selectedActivityLevel.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538727987.524663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.selectedActivityLevel.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538727987.529138"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FitGroupie.FilterViewController"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538727987.532566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;FitGroupie.FilterViewController&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538727987.534972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FitGroupie/Controllers/FilterViewController.swift"
+            timestampString = "538982714.385306"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FilterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.selectedWorkoutType.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538797626.528355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.selectedWorkoutType.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538797626.5330859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FitGroupie.FilterViewController"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538797626.539414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FitGroupie.FilterViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;FitGroupie.FilterViewController&gt;"
+                  moduleName = "FitGroupie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chrismartin/Projects/FitGroupie/FitGroupie/Controllers/FilterViewController.swift"
+                  timestampString = "538797626.542951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FitGroupie/Controllers/FilterViewController.swift"
+            timestampString = "538982714.386397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "filterButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

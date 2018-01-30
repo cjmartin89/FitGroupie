@@ -29,9 +29,6 @@
 		35AEFAC520016DE80037260F /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFAC420016DE80037260F /* PickerData.swift */; };
 		35AEFAC620016DE80037260F /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFAC420016DE80037260F /* PickerData.swift */; };
 		35AEFAC720016DE80037260F /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFAC420016DE80037260F /* PickerData.swift */; };
-		35AEFACD2001AB3B0037260F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFACC2001AB3B0037260F /* Workout.swift */; };
-		35AEFACE2001AB3B0037260F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFACC2001AB3B0037260F /* Workout.swift */; };
-		35AEFACF2001AB3B0037260F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFACC2001AB3B0037260F /* Workout.swift */; };
 		35E61E2F2008566A002DC3F3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E61E2E2008566A002DC3F3 /* WelcomeViewController.swift */; };
 		35E61E35200863E3002DC3F3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E61E34200863E3002DC3F3 /* LogInViewController.swift */; };
 		35E61E3720086B41002DC3F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E61E3620086B41002DC3F3 /* SignUpViewController.swift */; };
@@ -86,7 +83,6 @@
 		35AEFABB20015C1E0037260F /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		35AEFAC220015FD70037260F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		35AEFAC420016DE80037260F /* PickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerData.swift; sourceTree = "<group>"; };
-		35AEFACC2001AB3B0037260F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		35E61E2E2008566A002DC3F3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		35E61E34200863E3002DC3F3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		35E61E3620086B41002DC3F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +223,6 @@
 			children = (
 				35AEFAB5200086500037260F /* WorkoutLocation.swift */,
 				35AEFAC420016DE80037260F /* PickerData.swift */,
-				35AEFACC2001AB3B0037260F /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -562,7 +557,6 @@
 				352508B02009BF6F00036878 /* FilterViewController.swift in Sources */,
 				352508AE2009B8C400036878 /* ProfileViewController.swift in Sources */,
 				35E61E3720086B41002DC3F3 /* SignUpViewController.swift in Sources */,
-				35AEFACD2001AB3B0037260F /* Workout.swift in Sources */,
 				352508AC2009B83000036878 /* ListViewController.swift in Sources */,
 				35E61E2F2008566A002DC3F3 /* WelcomeViewController.swift in Sources */,
 			);
@@ -574,7 +568,6 @@
 			files = (
 				35AEFA9A20005BDD0037260F /* FitGroupieTests.swift in Sources */,
 				35AEFAC620016DE80037260F /* PickerData.swift in Sources */,
-				35AEFACE2001AB3B0037260F /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +577,6 @@
 			files = (
 				35AEFAA520005BDD0037260F /* FitGroupieUITests.swift in Sources */,
 				35AEFAC720016DE80037260F /* PickerData.swift in Sources */,
-				35AEFACF2001AB3B0037260F /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
